@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+	<head>
+		<center><h1>Sign Up</h1>
+		<h2>It's free and always will be</h2></center>
+	</head>
+	<body background="https://s-media-cache-ak0.pinimg.com/originals/56/d0/35/56d035f429ed07b145e202b8d1fe1222.jpg"><font size="6">
+	<form name="myForm" action="Sign-up.php" onsubmit="return validateform()" method="post" >
+	<table align="center">
+	       <tr>
+			<td> Full Name:</td><td><input type="text"  style="height:30px;font-size:18px;" placeholder="First Name" name="fullname" ></input >
+			<input type="text" size="20" style="height:30px;font-size:18px;"  placeholder="Last Name" name="lastname"></input> </td></tr>
+			<tr><td>Email id:</td><td><input type="email" style="height:30px;font-size:18px;"  placeholder="Email" name="email" ></input></td><br></tr>
+			<tr><td>Gender: </td><td>Male<input type="radio" name="gender" value="male"> 
+		Female<input type="radio" name="gender" value="female"></td></tr>
+		<tr><td>DOB:</td><td><input type="date" style="height:30px;font-size:18px;" name="dob"></td></tr>
+		<tr><td>Phone: </td><td><input type="text" style="height:30px;font-size:18px;" name="phone" size="10"></td></tr> 
+			<tr><td>password:</td><td><input type="password" style="height:30px;font-size:18px;" placeholder="password" name="password" ></input></td><br></tr>
+			<tr><td>confirm password:</td><td><input type="password" style="height:30px;font-size:18px;" placeholder="Re-enter password" name="password2" ></input></td><br></font></tr>
+			<tr><td>Upload your image: </td><td><input type="file" style="height:30px;font-size:18px;" name="img" accept="image/*">
+  			</td></tr>
+			</table>
+			<center><p><font size="4">By clicking Sign Up, you agree to our Terms and that you have read our Data Policy</font></p>
+			<tr><td><a href="login.html"><input type="submit" value="submit" style="height:50px;font-size:30px;background:black;color:white" ></td></tr></center>
+			</form></body>
+			<script>
+function validateform(){
+	var x=document.forms["myForm"]["fullname"].value;
+	var y=document.forms["myForm"]["lastname"].value;
+	var z=document.forms["myForm"]["gender"].value;
+	var a=document.forms["myForm"]["dob"].value;
+	var b=document.forms["myForm"]["phone"].value;
+	var c=document.forms["myForm"]["email"].value;
+	var d=document.forms["myForm"]["password1"].value;
+	var e=document.forms["myForm"]["password2"].value;	
+  var atpos = c.indexOf("@");
+    var dotpos = c.lastIndexOf("."); 
+   if (x==null || x=="") {
+        alert("First name must be filled out");
+        return false;
+    }
+    else if (y==null || y=="") {
+        alert("Last name must be filled out");
+        return false;
+    }
+    else if (z==null || z=="") {
+        alert("select gender");
+        return false;
+    }	
+   else if (a==null || a=="") {
+        alert("enter date of birth");
+        return false;
+    }
+   else if (b==null || b=="") {
+        alert("enter phone number");
+        return false;
+    }
+     else  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=c.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }	
+    else if (d==null || d==""||d.length<6) {
+        alert("weak password. Password should be of atleast 6 characters!");
+        return false;
+    }
+     else if (e==null || e==""||e.length<6) {
+        alert("weak password. Password should be of atleast 6 characters!");
+        return false;
+    }	
+    if(d!=e){
+    	alert("password didn't matched...!");
+    	return false;
+    }
+  
+}
+</script>  		
+</html>
+
+<!----   >

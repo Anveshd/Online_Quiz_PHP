@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	New registration page
+</head>
+<body>
+	<form name="myForm" onSubmit="return validateform()" action="yyy" method="post" >
+		<table>
+			<tr><td>Email : </td><td><input type="email"  style="height:30px;font-size:18px;" placeholder="Email id"></td></tr><tr>
+			<td> User Name: </td><td><input type="text"  style="height:30px;font-size:18px;" placeholder="username" name="username" ></td>
+			</tr>
+			<tr><td> Phone no: </td><td><input type="Number"  style="height:30px;font-size:18px;" placeholder="phone number" name="phone" ></td>
+			</tr>
+			<tr><td> password: </td><td><input type="text"  style="height:30px;font-size:18px;" placeholder="password" name="password" ></td>
+			</tr>
+			<tr><td><a href="login.html"><input type="submit" value="Sign Up" style="height:50px;font-size:30px;background:black;color:white" ></td></tr>
+		</table>
+
+	</form>
+</body>
+</html>
+<script>
+function validateform(){
+	var x=document.forms["myForm"]["username"].value;
+	var n=document.forms["myForm"]["phone"].value;
+	var atpos = x.indexOf(" ");
+	if(atpos>0){
+		 alert("There are no spaces allowed in the username");
+        return false;
+	}
+	if(n.length!=10){
+		alert("phone number must be 10 digits");
+		return false;
+	}
+}
+</script>

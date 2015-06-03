@@ -1,0 +1,12 @@
+
+.button {
+  background-color:#A8A8A8;
+  color: #660099;
+  font-weight: bold;
+  font-size: 200%;
+  text-align:center;
+ position: absolute;
+    top: 40%;
+left:40%;
+right:50%;
+}

@@ -1,0 +1,64 @@
+<html>
+<head>
+<script type="text/javascript" language="JavaScript">
+function checkCheckBoxes(theForm) {
+	if (theForm.CHECKBOX_1.checked == false) 
+	{
+		alert ('Please check the terms and conditions!');
+		return false;
+	} else { 	
+		return true;
+	}
+}
+
+</script> 
+</head>
+<body>
+<div align="right"  style="text-align: left; height: 15%" id="div2">View in:
+<select>
+  <option value="English">English</option>
+  
+ 
+</select>
+</div>
+<div  id="div4" ><a href="Hello.html" target="_parent" 
+style="display: block; text-align: center;">prev<<</a>
+</div>
+ <form action="start2.html" onsubmit="return checkCheckBoxes(this);" target="_top">
+	<p style="color:red"><input type="CHECKBOX" name="CHECKBOX_1">I have read and understood the instructions.All Computer Hardwares alloted to me are in proper working condition.I agree that in case of not adhering to instructions, I will be disqualified from taking the exam.</p>
+	<p><center><input type="submit" value="I Agree...Begin Test"></center></p>
+</form>
+</body>
+<style type="text/css">
+#div2
+{
+overflow-y: scroll;
+
+background-color:white;
+margin:auto;
+}
+a:link {
+    color:#000000;
+    background-color:transparent;
+    text-decoration:none;
+
+}
+a:visited {
+    color:#000000;
+    background-color:transparent;
+    text-decoration:none;
+	
+}
+a:hover {
+    color:#ff0000;
+    background-color:transparent;
+    text-decoration:underline;
+}
+a:active {
+    color:#ff0000;
+    background-color:transparent;
+    text-decoration:underline;
+}
+
+</style>
+</html>
